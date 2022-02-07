@@ -20,7 +20,7 @@ function onChangeTheme() {
 
 const addCurrentTheme = () => {
   const currentTheme = localStorage.getItem('currentTheme');
-  bodyRef.classList.add(currentTheme ?? Theme.LIGHT);
+  bodyRef.classList.add(currentTheme || Theme.LIGHT);
   //   const currentTogle = localStorage.getItem('togle');
   //   toolBar.checked = JSON.parse(currentTogle);
   toolBar.checked = !document.body.classList.contains(Theme.LIGHT);
